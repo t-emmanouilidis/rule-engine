@@ -7,7 +7,10 @@ import groovy.transform.PackageScope
  * Defines a rule in the rules engine. A rule holds a name that will be used
  * to enforce its uniqueness. A rule's conditions and subsequent actions are
  * defined as a boolean {@link Closure} (returns a boolean value) and
- * a {@link Void} {@link Closure} (does not return a value) respectively.*/
+ * a {@link Void} {@link Closure} (does not return a value) respectively.
+ *
+ * @author temma
+ */
 class Rule {
 
     private final String name

@@ -4,6 +4,12 @@ import groovy.transform.PackageScope
 
 import java.util.stream.Collectors
 
+/**
+ * An instance of this class holds the facts the rules or the client
+ * inserts into a {@link Session}.
+ *
+ * @author temma
+ */
 @PackageScope
 class WorkingMemory {
 

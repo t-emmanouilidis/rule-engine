@@ -9,7 +9,10 @@ import java.time.Instant
 
 /**
  * Describes an object that is the entrypoint to the rule execution.
- * This session object manages the working memory of the rule execution.*/
+ * This session object manages the working memory of the rule execution.
+ *
+ * @author temma
+ */
 class Session {
 
     private static Logger logger = LoggerFactory.getLogger(Session.class)
@@ -106,6 +109,7 @@ class Session {
      *
      * TODO: Currently a no-loop rule execution strategy is supported (alreadyExecutedRules is needed for that).
      */
+
     private Collection<RuleExecution> ruleExecutionAgenda(Set<String> alreadyExecutedRules) throws ConditionException {
 
         Collection<RuleExecution> agenda = new ArrayList<>()

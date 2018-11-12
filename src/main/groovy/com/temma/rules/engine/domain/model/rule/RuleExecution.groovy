@@ -7,7 +7,10 @@ import java.time.Instant
 
 /**
  * Describes an execution attempt for a specific {@link Rule},
- * a specific {@link Session} and a specific {@link RuleExecutionContext}.*/
+ * a specific {@link Session} and a specific {@link RuleExecutionContext}.
+ *
+ * @author temma
+ */
 class RuleExecution {
 
     private Session session

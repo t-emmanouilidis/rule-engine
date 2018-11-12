@@ -5,7 +5,9 @@ import com.temma.rules.engine.domain.model.rule.Rule
 import com.temma.rules.engine.infrastructure.rule.basic.RuleFileLoader
 
 /**
- * A builder class for a {@link KnowledgeBase}.
+ * A builder class for a {@link KnowledgeBase}s.
+ *
+ * @author temma
  */
 class KnowledgeBaseBuilder {
 

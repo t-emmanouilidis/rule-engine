@@ -4,6 +4,13 @@ import com.temma.rules.engine.domain.model.rule.Actions
 import com.temma.rules.engine.domain.model.rule.Conditions
 import com.temma.rules.engine.domain.model.rule.Rule
 
+/**
+ * DSL Interface to the rule engine.
+ * An instance of this class delegates to either {@link Conditions} or {@link Actions}
+ * for the 'when' and 'then' clauses respectively.
+ *
+ * @author temma
+ */
 class RuleBuilder {
 
     private String name

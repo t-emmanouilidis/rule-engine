@@ -4,7 +4,9 @@ import com.temma.rules.engine.domain.model.common.RuleEngineException
 
 /**
  * A {@code KnowledgeBase} instance is a named collection of rules and
- * knows how to create a session which is an object that a client can use to evaluate against the rules.
+ * knows how to create a {@link Session}.
+ *
+ * @author temma
  */
 class KnowledgeBase {
 

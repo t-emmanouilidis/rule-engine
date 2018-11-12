@@ -6,6 +6,11 @@ import org.codehaus.groovy.control.CompilerConfiguration
 
 import java.nio.charset.StandardCharsets
 
+/**
+ * Basic load utility class for loading rules from files
+ *
+ * @author temma
+ */
 class RuleFileLoader {
 
     RuleFileLoader() {
@@ -19,9 +24,9 @@ class RuleFileLoader {
      * If the passed Groovy script evaluates to a collection
      * of rules
      *
-     * @param ruleFile
-     * @param classLoader
-     * @return
+     * @param ruleFile the file containing the {@link Rule}(s)
+     * @param classLoader the class loader to use to load the rules (in case they need access to classes outside the current classloader)
+     * @return a {@link Collection} of {@link Rule}s
      */
     Collection<Rule> allRules(Object ruleFile, ClassLoader classLoader) {
 
@@ -36,11 +41,11 @@ class RuleFileLoader {
     }
 
     /**
+     * Read and parses one or more rules from the given script text.
      *
-     *
-     * @param scriptText
-     * @param classLoader
-     * @return
+     * @param scriptText the text containing the rule scripts
+     * @param classLoader the class loader to use to load the rules (in case they need access to classes outside the current classloader)
+     * @return a {@link Collection} of {@link Rule}s
      */
     Collection<Rule> evaluate(String scriptText, ClassLoader classLoader) {
 

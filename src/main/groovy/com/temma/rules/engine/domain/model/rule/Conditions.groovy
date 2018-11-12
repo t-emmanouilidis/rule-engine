@@ -6,6 +6,8 @@ import groovy.transform.PackageScope
  * Describes an object that is responsible for supporting (delegate)
  * the condition clause of a rule and also makes available
  * the various functions that can be used in a rule condition clause.
+ *
+ * @author temma
  */
 class Conditions {
 
