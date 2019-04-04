@@ -1,9 +1,9 @@
 package com.temma.rules.engine.domain.model.rule
 
 import com.temma.rules.engine.domain.model.common.RuleEngineException
+import com.temma.rules.engine.infrastructure.common.log.Logger
+import com.temma.rules.engine.infrastructure.common.log.LoggerFactory
 import groovy.transform.PackageScope
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 
 import java.time.Instant
 
@@ -15,7 +15,7 @@ import java.time.Instant
  */
 class Session {
 
-    private static Logger logger = LoggerFactory.getLogger(Session.class)
+    private static final Logger LOGGER = LoggerFactory.getFor(Session.class)
 
     private final List<Rule> rules
 
@@ -80,9 +80,7 @@ class Session {
             }
 
             // log times
-            if (logger.isDebugEnabled()) {
-                agenda.each { ruleExecution -> logger.debug(ruleExecution.logMessage()) }
-            }
+            agenda.each { ruleExecution -> LOGGER.debug(ruleExecution.logMessage()) }
 
             // clear the agenda and re-compute the valid rules for next execution iteration
             // assign execution context
@@ -94,9 +92,7 @@ class Session {
 
         ExecutionSummary summary = new ExecutionSummary(ruleCount, startTime, endTime, Thread.currentThread().getName())
 
-        if (logger.isDebugEnabled()) {
-            logger.debug(summary.toString())
-        }
+        LOGGER.debug(summary.toString())
 
         return summary
 
