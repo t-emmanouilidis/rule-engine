@@ -14,7 +14,7 @@
 
         <!-- Project specific -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
 
         <!-- Dependency versions -->
         <groovy.version>2.4.12</groovy.version>
@@ -23,7 +23,7 @@
 
         <!-- Plugins -->
         <sonar.maven.plugin.version>3.2</sonar.maven.plugin.version>
-        <jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
+        <jacoco.maven.plugin.version>0.8.6</jacoco.maven.plugin.version>
         <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
         <maven.antrun.plugin.version>1.8</maven.antrun.plugin.version>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
